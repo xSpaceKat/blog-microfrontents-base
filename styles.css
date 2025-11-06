@@ -1,198 +1,143 @@
-/* 
-
-Grey Blog Free Template
-By Herreman David 
-http://www.free-css-templates.com
-
-*/
-
-body { 
-	margin:5px 0; 
-	padding:0; 
-	font: 100% Arial, Sans-Serif; 
-	color:#FFF;  
-	background-color:#eee;
-	line-height: 1.4em; 
-	background : #7D8085;
+/* --- Configuración base --- */
+* {
+  box-sizing: border-box;
 }
 
-.center { 
-	width: 530px; 
-	font-size: 95%; 
-	margin: 0px 0 5px 35px !important;
-	margin: 0px 0 5px 20px; 
-	padding: 0; 
-	background: #3D3E42; 
-	color: #FFF;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, Sans-Serif;
+  background: #2b2c2f;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-.toph { background: #3D3E42; height: 39px; margin:0; padding:0; }
-
-.content { 
-    color: #a0a0a0; 
-	margin: 0 auto; 
-	padding: 0; 
-	width: 800px; 
-	background: #3D3E42;
+/* --- Encabezado superior --- */
+header.toph {
+  background: linear-gradient(90deg, #3d3e42, #2b2c2f);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid #f29900;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.title {
-	background: #FFF url(../img/logo.jpg) left no-repeat;
-	height: 28px;
-	color: #F29900;
-	font-size:150%; 
-	font-weight:bold; 
-	padding: 10px 0 0 40px;
-	
+/* --- Contenedor principal --- */
+main.center {
+  width: 600px;
+  max-width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #3d3e42;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-.right {  
-	background: #FFF;
-	clear: both; 
-	font-size: 95%; 
-	float:right; 
-	width: 170px; 
-	margin: 0 15px 0 0 !important;
-	margin: 0 8px 0 0;
-	padding: 0px 1em 0 0px; 
+/* --- Enlaces generales --- */
+a {
+  color: #f29900;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.right a { color: #7D8085;}
-.nav { clear: both; text-align: left; color: 	#7D8085; padding: 5px 0 0 0; }
-.nav li { font-weight: bold; margin: 0 0 8px 0; padding: 0 0 0 5px; border-bottom: 1px solid #F29900; }
-.nav li a { color: #7D8085; }
-.nav li a:hover { color: #F29900; text-decoration: none; }
-
-.boxad { 	background: #45464B; color: #BBB; border: 1px solid #555; padding: 5px; }
-
-p { 	margin: 0 0 5px 0; 	padding: 0; color: #888; background: inherit; }
-hr { border: 0; height: 1px; color: #eee; background-color: #eee; }
-a { 	color: #888; background: inherit;  text-decoration:none; }
-a:hover { 	background: inherit;	text-decoration: underline; }
-h1 { padding:0; margin:0; color: #FFF; background: inherit;font: bold 1.8em Arial, Sans-Serif; letter-spacing: -1px; }
-h1 a {color: #FFF; background: inherit;}
-h2 { background-color: inherit; 	color:#F29900; font-size:140%; font-weight:bold; margin: 10px 0 10px 0; padding:0; }
-h2 a { color: #F29955; }
-h2 a:hover { 	color: #F29955; text-decoration: none;}
-
-ul { margin: 5px 0 20px 15px; padding : 0; list-style : none; }
-li { list-style-type: square;	color: #F29900;	margin: 0 0 0px 0;	padding: 0 0 0 0px; }
-li a { color: #7D8085; }
-li a:hover { color: #F29900;  }
-
-
-
-
-.footer { 
-	clear:both;
-	width: auto;
-	height: 37px;
-	color:#888;  
-	font-size:90%;
-	background: #3D3E42 url(bot.jpg) no-repeat center;
-	text-align:center; 
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
-
-.footer_text {
-	text-align: right;
- 	margin: 0; padding: 0;
-	color: #aaa;
+/* --- Titulares y texto --- */
+h1, h2, h3 {
+  color: #f29900;
+  margin: 10px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.footer_text a { color: #777; }
-
-
-fieldset {
-	border: 1px solid #eee;
+p {
+  margin: 10px 0;
+  color: #e0e0e0;
 }
 
-textarea.text { 
-	height: 150px; 
-	width: 90%; 
-	border: 1px solid #ccc; 
-	background: #fff; 
-	color: #000;
+/* --- Inputs y formularios --- */
+input.text, textarea.text {
+  border: 1px solid #555;
+  background: #f9f9f9;
+  color: #222;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  transition: border 0.3s ease, background 0.3s ease;
 }
 
-textarea.text:hover { 
-	border: 1px solid #eee; 
-	background: #FFFFF4; 
-	color: #000;
+input.text:focus,
+textarea.text:focus {
+  border: 1px solid #f29900;
+  background: #fff;
+  outline: none;
 }
 
-input.field { 
-	border: 1px solid #ccc; 
-	background-color: #3C3C3C; 
-	width: 100px; 
-	color: #000;
+input.button,
+input.searchbutton {
+  background: #f29900;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-input.field:hover { 
-	border: 1px solid #eee; 
-	background: #ccc; 
-	color: #000;
+input.button:hover,
+input.searchbutton:hover {
+  background: #ffb84d;
 }
 
-input.text { 
-	margin: 0; 
-	width: 110px;
-	border: 1px solid #F29900; 
-	background: #FFF;
-	color: #808080; 
-}
-
-input.text:hover { 
-	border: 1px solid #F26600; 
-}
-
-input.searchbutton { 
-	margin: 0; 
-	font-size: 100%; 
-	font-family: Arial, Sans-serif; 
-	border: none; 
-	background: #FFFFFF; 
-	color: #808080; 
-	padding: 1px; 
-	font-weight: bold; 
-}
-
-.time { 
-	color: #192D50; 
-	float: left;
-	text-align: left; 
-	padding: 5px 0 0 15px; 
-}
-
-input.button { 
-	background: #FFFFF4; 
-	color: #808080;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+/* --- Mensajes de error y éxito --- */
+.error, .success {
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .error {
-	color: #990000;
-	background-color: #FFF0F0;
-	padding: 7px;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	border: 1px dashed #990000;
-}
-.error h2 {
-	color: #990000;
-	background: inherit;
+  background: #fff0f0;
+  color: #a30000;
+  border-left: 4px solid #a30000;
 }
 
 .success {
-	color: #000000;
-	background: #F5FBE1;
-	padding: 7px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border: 1px dashed #7BA813;
+  background: #f5fbe1;
+  color: #4b6d0b;
+  border-left: 4px solid #7ba813;
 }
-.success h2 {
-	color: #7BA813;
-	background: inherit;
+
+/* --- Pie de página --- */
+.footer {
+  margin-top: 40px;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  background: linear-gradient(90deg, #3d3e42, #2b2c2f);
+  border-top: 1px solid #555;
+}
+
+.footer a {
+  color: #f29900;
+}
+
+/* --- Layout responsivo --- */
+@media (max-width: 600px) {
+  main.center {
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  header.toph {
+    height: 45px;
+    padding: 0 10px;
+  }
 }
