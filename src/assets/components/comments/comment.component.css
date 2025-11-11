@@ -1,0 +1,99 @@
+/* --- Enlaces dentro de details --- */
+details a {
+  color: #f29900;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+details a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+/* --- Encabezado de la sección (summary) --- */
+.date {
+  color: #f5f5f5;
+  background: linear-gradient(90deg, #3d3e42, #2f3034);
+  text-align: left;
+  margin: 6px 0 8px 0;
+  padding: 0.6em 0.8em;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.date:hover {
+  background: #4a4b50;
+  transform: scale(1.01);
+}
+
+.date img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* --- Contenedor general de comentarios --- */
+.comments {
+  padding: 12px;
+  margin-top: 5px;
+  background: #2b2c2f;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Cada comentario individual --- */
+.commentsbox {
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  color: #222;
+  border-radius: 6px;
+  border-left: 4px solid #f29900;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.commentsbox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Nombre del usuario --- */
+.commentsbox b {
+  color: #f29900;
+  font-weight: 600;
+}
+
+/* --- Texto del comentario --- */
+.commentsbox p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* --- Animación suave al abrir details --- */
+details[open] .comments {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
